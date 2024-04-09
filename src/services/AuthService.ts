@@ -158,11 +158,11 @@ class AuthService {
 
       await this.handleResponse(response);
 
-      const user = await response.json();
+      const responseJson = await response.json();
 
-      if (user) {
+      if (responseJson) {
         this.csrfToken = null;
-        return user;
+        return responseJson.data;
       } else {
         return null;
       }
