@@ -1,5 +1,6 @@
 import TokenStorage from '../utils/TokenStorage';
-import type { AuthConfig, User } from 'react-native-laravel-sanctum';
+import type { AuthConfig } from '../interfaces/AuthConfig';
+import type { User } from '../interfaces/User';
 
 class AuthService {
   private readonly config: AuthConfig | null;
